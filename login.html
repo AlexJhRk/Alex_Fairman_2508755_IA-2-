@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Register for Coding Conf 2026.">
+    <title>Register | Coding Conf</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="validation.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+    <a class="brand" href="index.html">
+        <img class="brand-icon" src="../assets/logo.png" alt="Coding Conf Logo">
+        Coding Conf
+    </a>
+
+    <nav aria-label="Main navigation">
+        <a href="index.html">Home</a>
+    </nav>
+</header>
+
+<main class="form-page">
+    <section class="form-intro">
+        <p class="eyebrow">CODING CONF 2026</p>
+        <h1>Secure your <span class="gradient-text">spot.</span></h1>
+        <p>
+            Enter your information below to generate your
+            personalized conference ticket.
+        </p>
+        <p class="form-event-details">
+            October 26, 2026 <span aria-hidden="true">·</span>
+            Papine, Kgn
+        </p>
+    </section>
+
+    <form id="registration-form" class="registration-form"
+          novalidate>
+
+        <div class="form-group">
+            <label for="full-name">Full Name</label>
+            <input
+                    type="text"
+                    id="full-name"
+                    name="fullName"
+                    placeholder="e.g. Jordan Brown"
+                    autocomplete="name"
+                    aria-describedby="name-error"
+                    required>
+            <small class="error-message" id="full-name-error"
+                   aria-live="polite"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                    aria-describedby="email-error"
+                    required>
+            <small class="error-message" id="email-error"
+                   aria-live="polite"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="github">GitHub Username</label>
+            <input
+                    type="text"
+                    id="github"
+                    name="github"
+                    placeholder="@yourusername"
+                    autocomplete="username"
+                    aria-describedby="github-error"
+                    required>
+            <small class="field-hint">
+                Include the @ symbol before your username.
+            </small>
+            <small class="error-message" id="github-error"
+                   aria-live="polite"></small>
+        </div>
+
+        <div class="form-group">
+            <label for="avatar">Upload Your Avatar</label>
+
+            <input
+                    type="file"
+                    id="avatar"
+                    name="avatar"
+                    accept="image/jpeg,image/png"
+                    aria-describedby="avatar-hint avatar-error"
+                    required>
+
+            <small class="field-hint" id="avatar-hint">
+                JPEG or PNG only. Maximum file size: 500 KB.
+            </small>
+
+            <small class="error-message" id="avatar-error"
+                   aria-live="polite"></small>
+        </div>
+
+        <p class="form-notice" id="form-notice"
+           role="status" aria-live="polite"></p>
+
+        <button class="button button-primary submit-button"
+                type="submit">
+            Generate My Ticket →
+        </button>
+
+        <a class="button button-primary back-link" href="index.html">
+            ← Back to home
+        </a>
+    </form>
+</main>
+
+<footer class="site-footer">
+    <a class="brand" href="index.html">
+        <img class="brand-icon" src="../assets/logo.png" alt="Coding Conf Footer Logo">
+        Coding Conf
+    </a>
+    <p>October 26, 2026 · Papine, Kgn</p>
+</footer>
+</body>
+</html>

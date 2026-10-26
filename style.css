@@ -1,0 +1,760 @@
+/* These settings make sizing easier to manage across the page */
+* {
+    box-sizing: border-box;
+}
+
+/* Makes scrolling to different sections look smoother */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Main page style and the dark purple background */
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: radial-gradient(ellipse at top, rgba(109, 40, 217, 0.22), transparent 55%), #100b20;
+    color: #f8f5ff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(15px, 1.5vw, 17px);
+    line-height: 1.6;
+}
+
+/* Stops images from going outside their containers */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Keeps links the same color as the rest of their text */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Makes buttons and input fields use the same font as the page */
+button,
+input {
+    font: inherit;
+}
+
+/* Removes the highlight that sometimes appears when tapping on a phone */
+button,
+a,
+input {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Holds the logo and navigation links at the top */
+.site-header {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px clamp(20px, 5vw, 64px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+/* Keeps the logo icon and website name next to each other */
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.15rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* The little square beside the website name */
+.brand-icon {
+    display: inline-grid;
+    place-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    color: blue;
+    font-weight: bold;
+}
+
+/* Lines up the navigation links */
+nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(12px, 3vw, 30px);
+}
+
+/* Gives the navigation links a softer color */
+nav a {
+    color: #b9b1cc;
+    transition: color 0.2s;
+}
+
+/* Makes links brighter when someone hovers over them or selects them */
+nav a:hover,
+nav a:focus-visible {
+    color: #f8f5ff;
+}
+
+/* Makes the register link look more like a button */
+nav .nav-register {
+    padding: 9px 16px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    color: #f8f5ff;
+}
+
+/* Makes sure the main content takes up the full available width */
+main {
+    width: 100%;
+}
+
+/* Keeps the main sections from getting too wide */
+.hero,
+.about-section,
+.closing-section,
+.site-footer {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-left: clamp(20px, 5vw, 64px);
+    padding-right: clamp(20px, 5vw, 64px);
+}
+
+/* The main welcome section at the top of the page */
+.hero {
+    min-height: 590px;
+    padding-top: clamp(65px, 10vw, 120px);
+    padding-bottom: 70px;
+    text-align: center;
+}
+
+/* The small uppercase text above the main headings */
+.eyebrow {
+    margin: 0 0 18px;
+    color: #f0abfc;
+    font-size: 0.78rem;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+}
+
+/* Removes the extra space at the top of headings and paragraphs */
+h1,
+h2,
+h3,
+p {
+    margin-top: 0;
+}
+
+/* Sets the size and spacing for the main headings */
+.hero h1,
+.form-intro h1,
+.success-message h1 {
+    font-size: clamp(2.5rem, 7vw, 5rem);
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+}
+
+/* Adds space below the main homepage heading */
+.hero h1 {
+    margin-bottom: 24px;
+}
+
+/* Keeps the descriptions from stretching too far across the page */
+.hero-description,
+.section-description {
+    max-width: 620px;
+    margin: 0 auto 30px;
+    color: #b9b1cc;
+}
+
+/* General button style used around the website */
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 48px;
+    padding: 12px 22px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.2s;
+}
+
+/* Moves the button up a little when hovered over */
+.button:hover {
+    transform: translateY(-2px);
+}
+
+/* The main button with the purple and pink gradient */
+.button-primary {
+    background: linear-gradient(110deg, #8b5cf6, #c026d3);
+    color: white;
+    box-shadow: 0 8px 30px rgba(139, 92, 246, 0.2);
+}
+
+/* Gives the main button a stronger glow on hover */
+.button-primary:hover {
+    box-shadow: 0 10px 35px rgba(192, 38, 211, 0.3);
+}
+
+/* Holds the date, location and other event information */
+.event-summary {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+    margin-top: 65px;
+    padding: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.035);
+}
+
+/* Stops each event detail from becoming too narrow */
+.event-summary > div {
+    min-width: 145px;
+}
+
+/* Small labels above the event details */
+.detail-label {
+    display: block;
+    color: #b9b1cc;
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 0.13em;
+}
+
+/* Makes the actual event details stand out */
+.event-summary p {
+    margin: 5px 0 0;
+    font-weight: bold;
+}
+
+/* The section that explains what the event is about */
+.about-section {
+    padding-top: 60px;
+    padding-bottom: 80px;
+    text-align: center;
+}
+
+/* Sets the size of the headings in the about and closing sections */
+.about-section h2,
+.closing-section h2 {
+    font-size: clamp(2rem, 5vw, 3.3rem);
+    line-height: 1.15;
+}
+
+/* Leaves some room between the section description and the cards */
+.section-description {
+    margin-bottom: 42px;
+}
+
+/* Arranges the feature cards in three columns */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    text-align: left;
+}
+
+/* Gives each feature its own card with a slightly see-through background */
+.feature-card {
+    padding: 26px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 18px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02));
+    transition: 0.2s;
+}
+
+/* Adds a little movement and a brighter border when hovering over a card */
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(192, 132, 252, 0.6);
+}
+
+/* Colors the feature numbers pink so they stand out */
+.feature-number {
+    color: #f0abfc;
+    font-weight: bold;
+}
+
+/* Adds space between the feature number and its heading */
+.feature-card h3 {
+    margin: 16px 0 8px;
+}
+
+/* Makes the card descriptions a little less bright */
+.feature-card p {
+    margin-bottom: 0;
+    color: #b9b1cc;
+}
+
+/* The final section encouraging visitors to register */
+.closing-section {
+    padding-top: 60px;
+    padding-bottom: 90px;
+    text-align: center;
+}
+
+/* Gives the closing section paragraph a softer color */
+.closing-section > p:not(.eyebrow) {
+    color: #b9b1cc;
+}
+
+/* Keeps the registration page from getting too wide */
+.form-page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 55px clamp(20px, 5vw, 64px) 85px;
+}
+
+/* Centers the introduction above the registration form */
+.form-intro {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+/* Adds some room below the registration page heading */
+.form-intro h1 {
+    margin-bottom: 20px;
+}
+
+/* Softens the text explaining how to register */
+.form-intro > p:not(.eyebrow) {
+    color: #b9b1cc;
+}
+
+/* Makes the event details slightly smaller on the form page */
+.form-event-details {
+    font-size: 0.9rem;
+}
+
+/* The main box containing all the registration fields */
+.registration-form {
+    padding: clamp(22px, 5vw, 38px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 22px;
+    background: rgba(28, 21, 49, 0.82);
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.18);
+}
+
+/* Adds space between each form field */
+.form-group {
+    margin-bottom: 24px;
+}
+
+/* Makes the field labels easier to notice */
+.form-group label {
+    display: block;
+    margin-bottom: 9px;
+    font-size: 0.94rem;
+    font-weight: bold;
+}
+
+/* Styles the boxes where visitors enter their information */
+.form-group input {
+    display: block;
+    width: 100%;
+    min-height: 49px;
+    padding: 12px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    outline: none;
+    background: #120d22;
+    color: #f8f5ff;
+    transition: 0.2s;
+}
+
+/* Makes placeholder text visible without being too bright */
+.form-group input::placeholder {
+    color: #8f86a4;
+}
+
+/* Highlights the input box when someone clicks into it */
+.form-group input:focus {
+    border-color: #a78bfa;
+    box-shadow: 0 0 0 3px rgba(167, 139, 250, 0.15);
+}
+
+/* Turns the input border red when the field has an error */
+.form-group input[aria-invalid="true"] {
+    border-color: #fca5a5;
+}
+
+/* Extra information shown underneath a form field */
+.field-hint {
+    display: block;
+    margin-top: 7px;
+    color: #b9b1cc;
+    font-size: 0.82rem;
+}
+
+/* Shows the error message below a field */
+.error-message {
+    display: block;
+    margin-top: 5px;
+    color: #fca5a5;
+    font-size: 0.85rem;
+}
+
+
+
+/* General error message for problems with the whole form */
+.form-notice {
+    color: #fca5a5;
+    font-size: 0.9rem;
+}
+
+/* Makes the submit button stretch across the form */
+.submit-button {
+    width: 100%;
+    border: 0;
+}
+
+/* Link that takes visitors back to the previous page */
+.back-link {
+    display: block;
+    margin-top: 22px;
+    color: #b9b1cc;
+    text-align: center;
+}
+
+/* Brightens the back link when someone hovers over it */
+.back-link:hover {
+    color: #f8f5ff;
+}
+
+/* Keeps the ticket page centered and easy to read */
+.ticket-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 55px clamp(20px, 5vw, 64px) 90px;
+}
+
+/* Centers the message shown after registration is successful */
+.success-message {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* The green circle with the success symbol */
+.success-icon {
+    display: inline-grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 22px;
+    border: 1px solid rgba(134, 239, 172, 0.4);
+    border-radius: 50%;
+    background: rgba(134, 239, 172, 0.1);
+    color: #86efac;
+    font-size: 1.5rem;
+}
+
+/* Sets a more suitable heading size for the success page */
+.success-message h1 {
+    font-size: clamp(2rem, 5vw, 3.6rem);
+}
+
+/* Makes the text under the success message less prominent */
+.success-message > p {
+    color: #b9b1cc;
+}
+
+/* The main ticket card with its glass-like background */
+.ticket-card {
+    position: relative;
+    overflow: hidden;
+    padding: clamp(22px, 5vw, 40px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 24px;
+    background: radial-gradient(circle at top right, rgba(192, 132, 252, 0.25), transparent 45%), rgba(255, 255, 255, 0.075);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
+}
+
+/* Lines up the top, bottom and attendee information inside the ticket */
+.ticket-top,
+.ticket-bottom,
+.attendee-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* The small ticket type label in the top corner */
+.ticket-badge {
+    padding: 7px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    color: #f0abfc;
+    font-size: 0.68rem;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+}
+
+/* Gives the event name and location room inside the ticket */
+.ticket-event {
+    padding: 45px 0 35px;
+}
+
+/* Makes the event name stand out on the ticket */
+.ticket-event h2 {
+    margin-bottom: 8px;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+}
+
+/* Styles the date and location below the event name */
+.ticket-event p {
+    margin-bottom: 0;
+    color: #b9b1cc;
+}
+
+/* The dashed line that separates ticket sections */
+.ticket-divider {
+    height: 1px;
+    border-top: 1px dashed rgba(255, 255, 255, 0.3);
+}
+
+/* Holds the attendee photo, name and ticket number */
+.attendee-details {
+    justify-content: flex-start;
+    padding: 28px 0;
+}
+
+/* The attendee's profile picture on the ticket */
+.ticket-avatar {
+    flex-shrink: 0;
+    width: 76px;
+    height: 76px;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    background: #29203f;
+    object-fit: cover;
+}
+
+/* Allows the attendee information to use the remaining space */
+.attendee-info {
+    min-width: 0;
+    flex: 1;
+}
+
+/* Stops long names from breaking the ticket layout */
+.attendee-info h3 {
+    overflow-wrap: anywhere;
+    margin: 4px 0;
+    font-size: clamp(1rem, 3vw, 1.4rem);
+}
+
+/* Gives the attendee email address a pink color */
+.attendee-info a {
+    color: #f0abfc;
+    overflow-wrap: anywhere;
+}
+
+/* Keeps the ticket number aligned to the right */
+.ticket-number {
+    flex-shrink: 0;
+    text-align: right;
+}
+
+/* Makes the ticket number easy to find */
+.ticket-number p {
+    margin: 5px 0 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* Holds the extra ticket information along the bottom */
+.ticket-bottom {
+    flex-wrap: wrap;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Styles the small details in the bottom section */
+.ticket-bottom p {
+    margin: 6px 0 0;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Lines up the buttons underneath the ticket */
+.ticket-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+/* The footer with the final links and copyright text */
+.site-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding-top: 28px;
+    padding-bottom: 28px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Keeps footer text small and muted */
+.site-footer p {
+    margin: 0;
+    color: #b9b1cc;
+    font-size: 0.85rem;
+}
+
+/* Puts the copyright on its own line */
+.copyright {
+    width: 100%;
+}
+
+/* Stops headings from overflowing when the text is long */
+h1,
+h2,
+h3 {
+    overflow-wrap: break-word;
+}
+
+/* Adds some space above focused links, buttons and inputs when scrolling */
+button,
+a,
+input {
+    scroll-margin-top: 20px;
+}
+
+/* Adds a clear outline when navigating with a keyboard */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid #f0abfc;
+    outline-offset: 4px;
+}
+
+/* Adjusts the layout for tablets and smaller screens */
+@media (max-width: 700px) {
+
+    /* Moves the header items towards the top */
+    .site-header {
+        align-items: flex-start;
+    }
+
+    /* Allows navigation links to move onto another line */
+    .site-header nav {
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+
+    /* Stacks the feature cards into a single column */
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Lets the hero section take up only the space it needs */
+    .hero {
+        min-height: auto;
+    }
+
+    /* Brings the event details a little closer together */
+    .event-summary {
+        gap: 22px;
+    }
+
+    /* Makes the event detail items narrower on smaller screens */
+    .event-summary > div {
+        min-width: 120px;
+    }
+
+    /* Stacks the footer content neatly */
+    .site-footer {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    /* Lets the copyright text fit its content */
+    .copyright {
+        width: auto;
+    }
+}
+#ticket-header{
+    margin: 0;
+    max-width: 11000px;
+    background: radial-gradient(ellipse at top, rgba(109, 40, 217, 0.22), transparent 55%), #100b20;
+    color: #f8f5ff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(15px, 1.5vw, 17px);
+    line-height: 1.6;
+}
+#ticket-footer{
+    background: radial-gradient(ellipse at top, rgba(109, 40, 217, 0.22), transparent 55%), #100b20;
+    color: #f8f5ff
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(15px, 1.5vw, 17px);
+}
+
+/* Extra changes for smaller mobile phones */
+@media (max-width: 480px) {
+
+    /* Puts the logo above the navigation links */
+    .site-header {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    /* Aligns the navigation links to the left */
+    .site-header nav {
+        justify-content: flex-start;
+        gap: 16px;
+    }
+
+    /* Reduces the space above the hero heading */
+    .hero {
+        padding-top: 60px;
+    }
+
+    /* Stacks the event details vertically */
+    .event-summary {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        text-align: left;
+    }
+
+    /* Makes each event detail take up the full width */
+    .event-summary > div {
+        width: 100%;
+    }
+
+    /* Stacks the ticket header items on small screens */
+    .ticket-top {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    /* Allows attendee details to wrap when space is limited */
+    .attendee-details {
+        flex-wrap: wrap;
+    }
+
+    /* Moves the ticket number towards the right */
+    .ticket-number {
+        margin-left: auto;
+    }
+
+    /* Adds space between the bottom ticket details */
+    .ticket-bottom {
+        gap: 20px;
+    }
+
+    /* Makes the ticket buttons full width on phones */
+    .ticket-actions .button {
+        width: 100%;
+    }
+}

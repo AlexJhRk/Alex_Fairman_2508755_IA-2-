@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+          content="Your personalized Coding Conf ticket.">
+    <title>Your Ticket | Coding Conf</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="ticket.js" defer></script>
+    <style>
+        body {
+        background-image: url("../assets/Neon Cyber Circuit Background.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+<header class="site-header" id="ticket-header">
+    <a class="brand" href="index.html">
+        <img class="brand-icon" src="../assets/logo.png" alt="Coding Conf Logo">
+        Coding Conf
+    </a>
+</header>
+
+<main class="ticket-page">
+    <section class="success-message" aria-live="polite">
+        <span class="success-icon" aria-hidden="true">✓</span>
+        <p class="eyebrow">REGISTRATION COMPLETE</p>
+
+        <h1>
+            Congrats, <span id="congratulations-name">Attendee</span>!
+            <br>Your ticket is ready.
+        </h1>
+
+        <p style="border-radius: 10px; background: radial-gradient(ellipse at top, rgba(109, 40, 217, 0.72), transparent 100%); background-color: rgba(16, 11, 32, .32)">
+            We are excited to have you join us at Coding Conf 2026.
+        </p>
+
+    </section>
+
+    <section class="ticket-card" aria-label="Conference admission ticket">
+        <div class="ticket-top">
+            <div class="brand ticket-brand">
+                <img class="brand-icon" src="../assets/logo.png" alt="Coding Conf Ticket Logo">
+                Coding Conf
+            </div>
+
+            <span class="ticket-badge">ADMISSION TICKET</span>
+        </div>
+
+        <div class="ticket-event">
+            <h2>Coding Conf 2026</h2>
+            <p>Ideas, innovation, and the future of technology.</p>
+        </div>
+
+        <div class="ticket-divider"></div>
+
+        <div class="attendee-details">
+            <img
+                    id="ticket-avatar"
+                    class="ticket-avatar"
+                    src=""
+                    alt="Your uploaded profile avatar">
+
+            <div class="attendee-info">
+                <span class="detail-label">ATTENDEE</span>
+                <h3 id="ticket-name">Your Name</h3>
+                <a id="ticket-github"
+                   href="https://github.com/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    @username
+                </a>
+            </div>
+
+            <div class="ticket-number">
+                <span class="detail-label">TICKET</span>
+                <p id="ticket-serial">#00000</p>
+            </div>
+        </div>
+
+        <div class="ticket-bottom">
+            <div>
+                <span class="detail-label">DATE</span>
+                <p>OCT 26, 2026</p>
+            </div>
+
+            <div>
+                <span class="detail-label">LOCATION</span>
+                <p>PAPINE, KGN</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="ticket-actions">
+        <a class="button button-primary" href="index.html">
+            Back to Home
+        </a>
+    </div>
+</main>
+
+<footer class="site-footer" id="ticket-footer">
+    <a class="brand" href="index.html">
+        <img class="brand-icon" src="../assets/logo.png" alt="Coding Conf Footer Logo">
+        Coding Conf
+    </a>
+    <p>October 26, 2026 · Papine, Kgn</p>
+</footer>
+</body>
+</html>
